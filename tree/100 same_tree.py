@@ -8,6 +8,7 @@ class TreeNode:
 class Solution:
     def isSameTree(self, p, q):
         """
+        判断两个二叉树是否相等
         :type p: TreeNode
         :type q: TreeNode
         :rtype: bool
