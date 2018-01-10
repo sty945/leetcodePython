@@ -23,6 +23,6 @@ class Solution:
         """
         if not root:
             return None
-        root.left , root.right = root.right, root.left;
+        root.left , root.right = root.right, root.left; #swap two son tree
         self.invertTree(root.left)
         self.invertTree(root.right)
