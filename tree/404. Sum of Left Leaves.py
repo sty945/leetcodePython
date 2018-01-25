@@ -21,19 +21,17 @@ class Solution:
         :type root: TreeNode
         :rtype: int
         """
-        ret = []
+        ret = 0
         stack = [root]
         while stack:
             node = stack.pop()
             if node:
-                # 左孩子非空
                 if node.left:
-                    # 左孩子为叶子节点
                     if node.left.left == None and node.left.right == None:
-                        ret.append(node.left.val)
+                        ret += node.left.val
                 stack.append(node.right)
                 stack.append(node.left)
-        return sum(ret)
+        return ret
 
 
 
