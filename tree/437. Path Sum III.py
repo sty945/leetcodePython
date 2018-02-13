@@ -19,6 +19,7 @@ class Solution1:
     '''
     Brute Force Solution:traverse each node (preorder traversal) and
     then find all paths which sum to the target using this node as root.
+    good
     '''
     def pathSum(self, root, sum):
         """
@@ -54,6 +55,7 @@ class Solution:
     def find_path(self, root, target, cur_sum, dic):
         if not root:
             return
+        # if
         cur_sum += root.val  # 从根节点到当前节点路径的和
         self.res += dic.get(cur_sum - target, 0)  # 减去target，若在dic中出现过，表明当前路径中有子路径和为target
         if cur_sum in dic:  # 把cur_sum加入到dic中
