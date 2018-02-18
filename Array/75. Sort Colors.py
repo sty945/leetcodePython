@@ -30,12 +30,6 @@ class Solution:
                 i += 1
 
 
-
-
-
-
-
-
 class Solution1:
     """
     Runtime: 36 ms,beats 100.0% of python3 submissions
