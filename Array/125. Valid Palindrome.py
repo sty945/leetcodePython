@@ -31,5 +31,3 @@ class Solution:
         return True
 
 
-a = Solution()
-
