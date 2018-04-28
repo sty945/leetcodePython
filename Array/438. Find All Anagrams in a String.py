@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # Time: 2018/4/29 7:10
 # Author: sty
-# File: leetcode 438. Find All Anagrams in a String.py
+# File: 438. Find All Anagrams in a String.py
 
 from collections import defaultdict
 
