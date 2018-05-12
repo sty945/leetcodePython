@@ -37,6 +37,7 @@ class Solution:
                 return True
         return False
 
+
 from collections import defaultdict
 import operator
 class Solution1:
