@@ -165,7 +165,3 @@ class Solution4:
                 count -= 1
         return count == 26
 
-
-
-a = Solution2()
-print(a.checkInclusion("a", "ab"))
