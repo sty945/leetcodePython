@@ -10,6 +10,10 @@
 
 
 class Solution:
+    """
+    https://leetcode.com/problems/3sum/discuss/126891/Full-discussion-with-pictures:-O(n2)-two-pointer-solution-and-O(n2)-hash-set-solution
+    https://leetcode.com/problems/3sum/discuss/139529/My-Python-code-can-beat-94.3.-Who-can-share-a-faster-code
+    """
     def threeSum(self, nums):
         """
         :type nums: List[int]
