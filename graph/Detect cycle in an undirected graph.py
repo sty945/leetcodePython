@@ -65,7 +65,7 @@ if __name__ == '__main__':
 
 
 """
-Input:
+Input:                                     
 2
 2 2
 0 1 0 0
