@@ -21,7 +21,15 @@ class Solution:
         s_dict = sorted(res_dict.items(), key=lambda e:e[1], reverse=True)
         res_str = []
         for k, v in s_dict:
-            for i in range(v):
-                res_str.append(k)
+            res_str.append(k * v)
         return ''.join(res_str)
+
+import collections
+class Solution1(object):
+    def frequencySort(self, str):
+        """
+        :type str: str
+        :rtype: str
+        """
+        return "".join([char * times for char, times in collections.Counter(str).most_common()])
 
