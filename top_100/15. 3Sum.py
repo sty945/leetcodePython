@@ -62,13 +62,20 @@ class Solution1:
         :type nums: List[int]
         :rtype: List[List[int]]
         """
-        nums.sort()
         length = len(nums)
+        if length < 3:
+            return []
+        if length == 3:
+            if sum(nums) == 0:
+                return [nums]
+            else:
+                return []
+        nums.sort()
         res = []
         for i in range(0, length - 2):
             if i > 0 and nums[i] == nums[i - 1]:
                 continue
-            two_sum = 0 - sum[i]
+            two_sum = 0 - nums[i]
             left = i + 1
             right = length - 1
             while left < right:
@@ -76,7 +83,7 @@ class Solution1:
                     res.append([nums[i], nums[left], nums[right]])
                     while left < right and nums[left] == nums[left + 1]:
                         left += 1
-                    while left < right and nums[right] == nums[right + 1]:
+                    while left < right and nums[right] == nums[right - 1]:
                         right -= 1
                     left += 1
                     right -= 1
@@ -84,7 +91,7 @@ class Solution1:
                     right -= 1
                 else:
                     left += 1
-
+        return res
 
 
 # a = Solution()
