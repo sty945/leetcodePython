@@ -53,6 +53,47 @@ class Solution:
                     k -= 1
         return res
 
+
+
+
+class Solution1:
+    def threeSum(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        length = len(nums)
+        if length < 3:
+            return []
+        if length == 3:
+            if sum(nums) == 0:
+                return [nums]
+            else:
+                return []
+        nums.sort()
+        res = []
+        for i in range(0, length - 2):
+            if i > 0 and nums[i] == nums[i - 1]:
+                continue
+            two_sum = 0 - nums[i]
+            left = i + 1
+            right = length - 1
+            while left < right:
+                if nums[left] + nums[right] == two_sum:
+                    res.append([nums[i], nums[left], nums[right]])
+                    while left < right and nums[left] == nums[left + 1]:
+                        left += 1
+                    while left < right and nums[right] == nums[right - 1]:
+                        right -= 1
+                    left += 1
+                    right -= 1
+                elif nums[left] + nums[right] > two_sum:
+                    right -= 1
+                else:
+                    left += 1
+        return res
+
+
 # a = Solution()
 # res = a.threeSum([-1,0,1,2,-1,-4])
 # print(res)
