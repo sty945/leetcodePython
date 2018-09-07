@@ -50,3 +50,11 @@ class MyStack:
             return True
         else:
             return False
+
+obj = MyStack()
+obj.push(1)
+obj.push(2)
+param_2 = obj.pop()
+param_3 = obj.top()
+param_4 = obj.empty()
+print(param_2, param_3, param_4)
