@@ -23,7 +23,6 @@ class Solution:
                 h = j - 1
             else:
                 l = j + 1
-        return nums[k]
 
     def partition(self, nums, low, high):
         parti = nums[low]
@@ -41,7 +40,7 @@ class Solution:
         res = []
         if k > len(tinput) or k <= 0:
             return res
-        kth_smallest = self.find_kth_smallest(tinput, k - 1)
+        self.find_kth_smallest(tinput, k - 1)
         print(tinput)
         for i in range(k):
             res.append(tinput[i])
