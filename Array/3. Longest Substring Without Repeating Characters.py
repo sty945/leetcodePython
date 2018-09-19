@@ -45,8 +45,8 @@ class Solution2:
             dic[ch] = i
         return res
 
-from collections import defaultdict
 
+from collections import defaultdict
 
 class Solution3:
     def lengthOfLongestSubstring(self, s):
