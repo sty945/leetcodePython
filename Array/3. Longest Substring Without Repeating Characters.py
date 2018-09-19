@@ -29,20 +29,6 @@ class Solution:
         return res
 
 
-class Solution2:
-    def lengthOfLongestSubstring(self, s):
-        """
-        use dict
-        :param s:
-        :return:
-        """
-        dic, res, start, = {}, 0, 0
-        for i, ch in enumerate(s):
-            if ch in dic:
-                start = max(start, dic[ch]+1)
-            res = max(res, i-start+1)
-            dic[ch] = i
-        return res
 
 class Solution2:
     def lengthOfLongestSubstring(self, s):
